@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This file is only used for Windows IIS servers.  On those servers, if you already have
+a web.config file in your /login/ directory, then merge this file's contents into that
+file.  Otherwise simply rename this file from web.config.ub to just web.config.
+-->
+
+<configuration>
+	<system.webServer>
+		<!-- Turn IIS's error messages from useless crap into something reasonable: -->
+		<!--
+		<httpErrors errorMode="Detailed" />
+		-->
+
+		<defaultDocument>
+			<files>
+				<add value="userbase.cgi" />
+			</files>
+		</defaultDocument>
+
+		<security>
+			<requestFiltering>
+				<requestLimits maxAllowedContentLength="100000000" />
+			</requestFiltering>
+		</security>
+	</system.webServer>
+</configuration>

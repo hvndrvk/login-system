@@ -1,0 +1,2 @@
+<!--#include virtual="/cgi-bin/userbase.cgi?$QUERY_STRING" -->
+<!-- Some servers (IIS) may require "exec cgi" instead of "include virtual" (but then qs vars aren't supported?). -->
